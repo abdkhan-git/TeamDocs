@@ -7,13 +7,15 @@ const Header = ({ children, className }: HeaderProps) => {
   return (
     <div className={cn("header", className)}>
       <Link href="/" className="md:flex-1">
-        <Image
-          src="/assets/icons/logo.svg"
-          alt="Logo with name"
-          width={120}
-          height={32}
-          className="hidden md:block"
-        />
+        <div className="hidden md:flex items-center">
+          <Image
+            src="/assets/icons/logo-icon.svg"
+            alt="Logo with name"
+            width={32}
+            height={32}
+          />
+          <span className="flex item-center gap-2 lg:gap-4">TeamDocs</span>
+        </div>
         <Image
           src="/assets/icons/logo-icon.svg"
           alt="Logo"
@@ -26,4 +28,5 @@ const Header = ({ children, className }: HeaderProps) => {
     </div>
   );
 };
+
 export default Header;

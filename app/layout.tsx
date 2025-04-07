@@ -27,14 +27,13 @@ export default function RootLayout({
       appearance={{
         baseTheme: dark,
         variables: {
-          colorPrimary: "#3361FF",
+          colorPrimary: "#3371FF",
           fontSize: "16px",
         },
       }}
     >
       <html lang="en" suppressHydrationWarning>
         <body
-          suppressHydrationWarning
           className={cn(
             "min-h-screen font-sans antialiased",
             fontSans.variable
