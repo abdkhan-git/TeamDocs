@@ -1,0 +1,28 @@
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE could not resolve
+npm ERR! 
+npm ERR! While resolving: @liveblocks/react-lexical@2.22.3
+npm ERR! Found: @lexical/react@0.28.0
+npm ERR! node_modules/@lexical/react
+npm ERR!   @lexical/react@"^0.28.0" from the root project
+npm ERR! 
+npm ERR! Could not resolve dependency:
+npm ERR! peer @lexical/react@"0.24.0" from @liveblocks/react-lexical@2.22.3
+npm ERR! node_modules/@liveblocks/react-lexical
+npm ERR!   @liveblocks/react-lexical@"^2.22.3" from the root project
+npm ERR! 
+npm ERR! Conflicting peer dependency: @lexical/react@0.24.0
+npm ERR! node_modules/@lexical/react
+npm ERR!   peer @lexical/react@"0.24.0" from @liveblocks/react-lexical@2.22.3
+npm ERR!   node_modules/@liveblocks/react-lexical
+npm ERR!     @liveblocks/react-lexical@"^2.22.3" from the root project
+npm ERR! 
+npm ERR! Fix the upstream dependency conflict, or retry
+npm ERR! this command with --force or --legacy-peer-deps
+npm ERR! to accept an incorrect (and potentially broken) dependency resolution.
+npm ERR! 
+npm ERR! 
+npm ERR! For a full report see:
+npm ERR! C:\Users\abood\AppData\Local\npm-cache\_logs\2025-04-13T02_08_22_086Z-eresolve-report.txt
+
+npm ERR! A complete log of this run can be found in: C:\Users\abood\AppData\Local\npm-cache\_logs\2025-04-13T02_08_22_086Z-debug-0.log
