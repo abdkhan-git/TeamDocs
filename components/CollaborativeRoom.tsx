@@ -1,16 +1,11 @@
 "use client";
+
 import { ClientSideSuspense, RoomProvider } from "@liveblocks/react/suspense";
 import { Editor } from "@/components/editor/Editor";
 import Header from "@/components/Header";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import ActiveCollaborators from "./ActiveCollaborators";
-import {
-  SignedIn,
-  SignedOut,
-  SignInButton,
-  SignUpButton,
-  UserButton,
-} from "@clerk/nextjs";
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Input } from "./ui/input";
 import Image from "next/image";
 import { updateDocument } from "@/lib/actions/room.actions";
@@ -62,9 +57,11 @@ const CollaborativeRoom = ({
         updateDocument(roomId, documentTitle);
       }
     };
+
     document.addEventListener("mousedown", handleClickOutside);
+
     return () => {
-      document.addEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [roomId, documentTitle]);
 
@@ -88,17 +85,18 @@ const CollaborativeRoom = ({
                   type="text"
                   value={documentTitle}
                   ref={inputRef}
-                  placeholder="Enter a title"
+                  placeholder="Enter title"
                   onChange={(e) => setDocumentTitle(e.target.value)}
                   onKeyDown={updateTitleHandler}
-                  disabled={!editing}
+                  disable={!editing}
                   className="document-title-input"
                 />
               ) : (
                 <>
-                  <p className="document-title"> {documentTitle}</p>
+                  <p className="document-title">{documentTitle}</p>
                 </>
               )}
+
               {currentUserType === "editor" && !editing && (
                 <Image
                   src="/assets/icons/edit.svg"
